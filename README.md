@@ -1,12 +1,22 @@
-# React + Vite
+# Analizador de Gastos - Primera Iteración
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Aplicación web para el registro y análisis de gastos personales desarrollada con React. Permite a los usuarios registrarse, iniciar sesión y gestionar sus gastos de manera organizada por categorías.
 
-Currently, two official plugins are available:
+## Características Principales
+- Registro e inicio de sesión de usuarios
+- Registro de gastos con fecha, categoría, descripción y monto
+- Edición y eliminación de gastos
+- Categorización de gastos (Alimentación, Transporte, Vivienda, etc.)
+- Interfaz intuitiva y responsive
+- Almacenamiento local de datos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías Utilizadas
+- React
+- LocalStorage para persistencia de datos
+- CSS para estilos
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Enlaces Importantes
+- [Aplicación Desplegada](https://analizador-de-gastos.netlify.app/)
+- [Repositorio GitHub](https://github.com/Agustin0007/Analizador-1-Iteraci-n)
+- [Informe del Trabajo](https://docs.google.com/document/d/e/2PACX-1vSnjuPpAk8ZgrsPBQdGzTNDrnoasRv_KqMROeQpoPHxjv_QgR_em0R0a754KW5bJg/pub)
