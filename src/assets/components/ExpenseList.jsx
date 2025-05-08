@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ExpenseForm from './ExpenseForm';
 
-function ExpenseList({ setIsAuthenticated }) {
+function ExpenseList({ setIsAuthenticated, setCurrentPage }) {
   const [expenses, setExpenses] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
@@ -22,6 +22,7 @@ function ExpenseList({ setIsAuthenticated }) {
   const handleLogout = () => {
     localStorage.removeItem('currentUser');
     setIsAuthenticated(false);
+    setCurrentPage('login');
   };
 
   const addExpense = (expense) => {

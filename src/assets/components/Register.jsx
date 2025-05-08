@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';  // Agregar esta línea
 
-function Register({ setIsAuthenticated }) {
+function Register({ setIsAuthenticated, setCurrentPage }) {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,7 +44,7 @@ function Register({ setIsAuthenticated }) {
     
     // Redirect to login after 2 seconds
     setTimeout(() => {
-      navigate('/login');
+      setCurrentPage('login');
     }, 2000);
   };
 
@@ -85,7 +84,7 @@ function Register({ setIsAuthenticated }) {
         <button type="submit" className="btn-primary">Registrarse</button>
       </form>
       <p>
-        ¿Ya tienes una cuenta? <Link to="/login">Inicia sesión aquí</Link>
+        ¿Ya tienes una cuenta? <button onClick={() => setCurrentPage('login')} className="link-button">Inicia sesión aquí</button>
       </p>
     </div>
   );

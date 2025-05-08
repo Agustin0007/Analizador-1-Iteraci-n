@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import './Login.css';  // Agregar esta línea
 
-function Login({ setIsAuthenticated }) {
+function Login({ setIsAuthenticated, setCurrentPage }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -25,6 +25,7 @@ function Login({ setIsAuthenticated }) {
       // Set current user in localStorage
       localStorage.setItem('currentUser', JSON.stringify(user));
       setIsAuthenticated(true);
+      setCurrentPage('expenses');
     } else {
       setError('Correo o contraseña incorrectos');
     }
@@ -56,7 +57,7 @@ function Login({ setIsAuthenticated }) {
         <button type="submit" className="btn-primary">Ingresar</button>
       </form>
       <p>
-        ¿No tienes una cuenta? <Link to="/register">Regístrate aquí</Link>
+        ¿No tienes una cuenta? <button onClick={() => setCurrentPage('register')} className="link-button">Regístrate aquí</button>
       </p>
     </div>
   );
